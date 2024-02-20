@@ -1,0 +1,47 @@
+{
+  "name": "aegis-rn-sdk-ts",
+  "version": "1.39.1",
+  "description": "Aegis sdk (TypeScript) for React-Native application",
+  "author": "Atypiape",
+  "license": "MIT",
+  "homepage": "https://github.com/atypiape/aegis-rn-sdk-ts.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atypiape/aegis-rn-sdk-ts.git"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.umd.cjs"
+  },
+  "keywords": [
+    "Aegis",
+    "aegis-sdk",
+    "aegis-rn-sdk",
+    "react-native",
+    "RUM",
+    "RUM 平台",
+    "前端性能监控",
+    "腾讯云监控"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && tsc --build tsconfig.declare.json",
+    "postbuild": "cp lib/aegis.min.js dist/"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react-native": ">= 0.60",
+    "@react-native-async-storage/async-storage": ">= 1.0.0"
+  }
+}
