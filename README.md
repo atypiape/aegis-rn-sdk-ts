@@ -19,6 +19,8 @@ $ npm install --save aegis-rn-sdk-ts
 
 ## 三方修改
 
+本库在官方 [aegis-rn-sdk](https://www.npmjs.com/package/aegis-rn-sdk) 的基础上做了以下几方面的修改：
+
 ### 1. 支持 TypeScript
 
 官方 [aegis-rn-sdk](https://www.npmjs.com/package/aegis-rn-sdk) 实际上没有提供 TypeScript 类型定义文件，本库进行了补充。可通过以下方式引入类型声明：
