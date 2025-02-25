@@ -1,6 +1,6 @@
 {
   "name": "aegis-rn-sdk-ts",
-  "version": "1.39.1",
+  "version": "1.39.1-fix.1",
   "description": "Aegis sdk (TypeScript) for React-Native application",
   "author": "Atypiape",
   "license": "MIT",

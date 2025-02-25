@@ -4,15 +4,19 @@ const AegisInner = require('./aegis.min.js');
  * 忽略 aegis-rn-sdk 内部警报
  */
 (function () {
-  const rn = require('react-native');
-  if (!rn) {
-    return;
+  // const rn = require('react-native');
+  // if (!rn) {
+  //   return;
+  // }
+  // const { LogBox } = rn;
+  // LogBox.ignoreLogs([
+  //   /** 代码异常警告 */
+  //   "ReferenceError: Property 'location' doesn't exist",
+  // ]);
+  // LogBox.ignoreLogs 的警告依然会显示在 React Native DevTools 控制台中，以下彻底解决：
+  if (globalThis && !('location' in globalThis)) {
+    (globalThis as any).location = {};
   }
-  const { LogBox } = rn;
-  LogBox.ignoreLogs([
-    /** 代码异常警告 */
-    "ReferenceError: Property 'location' doesn't exist",
-  ]);
 })();
 
 /**
